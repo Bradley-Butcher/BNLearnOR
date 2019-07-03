@@ -66,11 +66,9 @@ Produce.OR <- function(fit, config) {
     Odds.Ratio.Lowers <- c()
     Odds.Ratio.Uppers <- c()
     Condition <- c()
-    for (node in names(config$variable_levels)) {
+    for (node.name in names(config$variable_levels)) {
       
-      node.name <- node$node
-      
-      node.config <- config$variable_levels[node.name]
+      node.config <- config$variable_levels[[node.name]]
       
       if (target == node.name) {
         next
@@ -89,7 +87,11 @@ Produce.OR <- function(fit, config) {
         or.upper <- 0
         or.lower <- 100
         for (i in 1:10) {
-          OR <- Odds.Ratio.Binary(fit, target, node.name, reference.level, evidence.level, target.reference, target.target)
+          OR <- Odds.Ratio.Binary(fit, target, node.name,
+                                  as.character(reference.level),
+                                  as.character(evidence.level),
+                                  as.character(target.reference),
+                                  as.character(target.target))
           ors <- c(ors, OR)
           or.upper <- if (OR > or.upper) OR else or.upper
           or.lower <- if (OR < or.lower) OR else or.lower

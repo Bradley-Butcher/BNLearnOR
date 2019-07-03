@@ -19,12 +19,11 @@ The following is an example of the configuration file for the ALARM dataset:
 
 ```yaml
 target_variable: 'BP'
-target_levels: ['Low', 'High']
-target_reference: 'Normal'
-
+target_levels: ['LOW', 'HIGH']
+target_reference: 'NORMAL'
 variable_levels:
-  HIST: {'0':'False', 'True'}
-  CVP: {'0':'Low', '0':'High', '0':'Normal', 'Reference':'Normal'}
+  HIST: {'0':'FALSE', '1':'TRUE'}
+  CVP: {'0':'LOW', '1':'HIGH', '2':'NORMAL', 'Reference':'NORMAL'}
  ```
  
  The variables specified in variable levels will appear in the plot.

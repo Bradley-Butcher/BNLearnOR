@@ -1,0 +1,13 @@
+Package: BNLearnOR
+Title: Compute OR Plots for BNLearn Fit Objects
+Version: 0.0.0.1
+Authors@R: 
+    person(given = "Bradley",
+           family = "Butcher",
+           role = c("aut", "cre"),
+           email = "b.butcher@sussex.ac.uk")
+Description: Compute OR Plots for BNLearn Fit Objects
+License: What license it uses
+Encoding: UTF-8
+LazyData: true
+RoxygenNote: 6.1.1.9000

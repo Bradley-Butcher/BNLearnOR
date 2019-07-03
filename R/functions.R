@@ -113,7 +113,7 @@ Produce.OR <- function(fit, config) {
     
     
     df <- data.frame(Condition, Odds.Ratio.Means, Odds.Ratio.Lowers, Odds.Ratio.Uppers)
-    draw.forest.plot(df, paste0(target.reference, ' vs. ', target.target))
+    draw.forest.plot(df, paste0('Odds Ratios: ', target, ' ', target.reference, ' vs. ', target.target))
   }
 }
 
